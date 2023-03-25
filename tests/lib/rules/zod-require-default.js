@@ -35,7 +35,7 @@ ruleTester.run('zod-require-default', rule, {
       errors: [
         {
           message: '.default property required for zod schemas',
-          type: 'ExpressionStatement',
+          type: 'CallExpression',
         },
       ],
     },
@@ -44,7 +44,7 @@ ruleTester.run('zod-require-default', rule, {
       errors: [
         {
           message: '.default property required for zod schemas',
-          type: 'ExpressionStatement',
+          type: 'CallExpression',
         },
       ],
     },
@@ -53,7 +53,7 @@ ruleTester.run('zod-require-default', rule, {
       errors: [
         {
           message: '.default property required for zod schemas',
-          type: 'ExpressionStatement',
+          type: 'CallExpression',
         },
       ],
     },
