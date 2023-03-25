@@ -4,13 +4,16 @@ Please describe the origin of the rule here.
 
 ## Rule Details
 
-This rule aims to...
+This rule aims to require the default property for zod interfaces
 
 Examples of **incorrect** code for this rule:
 
 ```js
 
-// fill me in
+z.object({...})
+z.boolean()
+z.string()
+z.number()
 
 ```
 
@@ -18,7 +21,10 @@ Examples of **correct** code for this rule:
 
 ```js
 
-// fill me in
+z.object({}).default({...})
+z.boolean().default(...)
+z.string().default(...)
+z.number().default(...)
 
 ```
 

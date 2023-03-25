@@ -18,9 +18,14 @@ const rule = require('../../../lib/rules/zod-require-default'),
 const ruleTester = new RuleTester();
 ruleTester.run('zod-require-default', rule, {
   valid: [
-    // give me some code that won't trigger a warning
     {
       code: 'z.object({}).default({})',
+    },
+    {
+      code: 'z.string().default("example text")',
+    },
+    {
+      code: 'z.number().default(1)',
     },
   ],
 
@@ -28,7 +33,28 @@ ruleTester.run('zod-require-default', rule, {
     {
       code: 'z.object({})',
       errors: [
-        { message: 'Require zod default values', type: 'ExpressionStatement' },
+        {
+          message: '.default property required for zod schemas',
+          type: 'ExpressionStatement',
+        },
+      ],
+    },
+    {
+      code: 'z.string()',
+      errors: [
+        {
+          message: '.default property required for zod schemas',
+          type: 'ExpressionStatement',
+        },
+      ],
+    },
+    {
+      code: 'z.number()',
+      errors: [
+        {
+          message: '.default property required for zod schemas',
+          type: 'ExpressionStatement',
+        },
       ],
     },
   ],
