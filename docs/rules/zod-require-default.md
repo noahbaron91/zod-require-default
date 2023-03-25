@@ -1,4 +1,6 @@
-# Require zod default values (`zod-require-default`)
+# Require zod default values (`zod-require-default/zod-require-default`)
+
+<!-- end auto-generated rule header -->
 
 Please describe the origin of the rule here.
 
